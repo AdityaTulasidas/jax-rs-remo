@@ -77,7 +77,7 @@
           ]
         },
         {
-          "name": "Http://localhost:8080/api/demo",
+          "name": "queryparam",
           "request": {
             "method": "POST",
             "header": [],
@@ -99,15 +99,14 @@
               "query": [
                 {
                   "key": "message",
-                  "value": "from jaxrs",
-                  "type": "text"
+                  "value": "from jaxrs"
                 }
               ]
             }
           },
           "response": [
             {
-              "name": "Http://localhost:8080/api/demo",
+              "name": "queryparam",
               "originalRequest": {
                 "method": "POST",
                 "header": [],
@@ -116,7 +115,7 @@
                   "raw": ""
                 },
                 "url": {
-                  "raw": "Http://localhost:8080/api/demo?message=from jaxrs",
+                  "raw": "Http://localhost:8080/api/jaxrs?message=from jaxrs",
                   "protocol": "Http",
                   "host": [
                     "localhost"
@@ -124,13 +123,12 @@
                   "port": "8080",
                   "path": [
                     "api",
-                    "demo"
+                    "jaxrs"
                   ],
                   "query": [
                     {
                       "key": "message",
-                      "value": "from jaxrs",
-                      "type": "text"
+                      "value": "from jaxrs"
                     }
                   ]
                 }
@@ -149,7 +147,7 @@
                 },
                 {
                   "key": "Date",
-                  "value": "Sat, 29 Aug 2026 05:08:22 GMT"
+                  "value": "Sat, 29 Aug 2026 05:44:28 GMT"
                 },
                 {
                   "key": "Keep-Alive",
@@ -164,6 +162,115 @@
               "body": "{\n    \"message\": \"Created: from jaxrs\"\n}"
             }
           ]
+        },
+        {
+          "name": "pathparam",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "Http://localhost:8080/api/jaxrs/path/123",
+              "protocol": "Http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "jaxrs",
+                "path",
+                "123"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "pathparam",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "Http://localhost:8080/api/jaxrs/path/123",
+                  "protocol": "Http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "jaxrs",
+                    "path",
+                    "123"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "39"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 29 Aug 2026 05:44:53 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Created: received id: 123\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "body",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"message\":\"hi\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "Http://localhost:8080/api/jaxrs/body",
+              "protocol": "Http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "jaxrs",
+                "body"
+              ]
+            }
+          },
+          "response": []
         }
       ]
     },
